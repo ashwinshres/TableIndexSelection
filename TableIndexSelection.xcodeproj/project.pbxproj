@@ -12,6 +12,17 @@
 		5D9AB5D522DC9D3A005F33EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9AB5D322DC9D3A005F33EF /* Main.storyboard */; };
 		5D9AB5D722DC9D3C005F33EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9AB5D622DC9D3C005F33EF /* Assets.xcassets */; };
 		5D9AB5DA22DC9D3C005F33EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9AB5D822DC9D3C005F33EF /* LaunchScreen.storyboard */; };
+		5DB840322394AEB700B2A56F /* IndexSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB8402C2394AEB700B2A56F /* IndexSelectionView.xib */; };
+		5DB840332394AEB700B2A56F /* IndexSelectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8402D2394AEB700B2A56F /* IndexSelectionViewHelper.swift */; };
+		5DB840342394AEB700B2A56F /* IndexSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8402E2394AEB700B2A56F /* IndexSelectionView.swift */; };
+		5DB840352394AEB700B2A56F /* IndexSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DB840302394AEB700B2A56F /* IndexSelectionTableViewCell.xib */; };
+		5DB840362394AEB700B2A56F /* IndexSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840312394AEB700B2A56F /* IndexSelectionTableViewCell.swift */; };
+		5DB840392394AF1E00B2A56F /* IndexSelectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840382394AF1E00B2A56F /* IndexSelectionProtocols.swift */; };
+		5DB8403B2394AF5400B2A56F /* IndexSelectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8403A2394AF5400B2A56F /* IndexSelectionHelper.swift */; };
+		5DB8403E2394AFBA00B2A56F /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8403D2394AFBA00B2A56F /* TableViewExtension.swift */; };
+		5DB840412394B00D00B2A56F /* HapticFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB840402394B00D00B2A56F /* HapticFeed.swift */; };
+		5DDD7C8E23957568008B4882 /* IndexSelectionViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD7C8D23957568008B4882 /* IndexSelectionViewConstants.swift */; };
+		5DDD7C902395763E008B4882 /* IndexSelectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDD7C8F2395763E008B4882 /* IndexSelectionViewConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +33,17 @@
 		5D9AB5D622DC9D3C005F33EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D9AB5D922DC9D3C005F33EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D9AB5DB22DC9D3C005F33EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB8402C2394AEB700B2A56F /* IndexSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSelectionView.xib; sourceTree = "<group>"; };
+		5DB8402D2394AEB700B2A56F /* IndexSelectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSelectionViewHelper.swift; sourceTree = "<group>"; };
+		5DB8402E2394AEB700B2A56F /* IndexSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSelectionView.swift; sourceTree = "<group>"; };
+		5DB840302394AEB700B2A56F /* IndexSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		5DB840312394AEB700B2A56F /* IndexSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		5DB840382394AF1E00B2A56F /* IndexSelectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSelectionProtocols.swift; sourceTree = "<group>"; };
+		5DB8403A2394AF5400B2A56F /* IndexSelectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSelectionHelper.swift; sourceTree = "<group>"; };
+		5DB8403D2394AFBA00B2A56F /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		5DB840402394B00D00B2A56F /* HapticFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeed.swift; sourceTree = "<group>"; };
+		5DDD7C8D23957568008B4882 /* IndexSelectionViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSelectionViewConstants.swift; sourceTree = "<group>"; };
+		5DDD7C8F2395763E008B4882 /* IndexSelectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSelectionViewConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,8 @@
 		5D9AB5CE22DC9D3A005F33EF /* TableIndexSelection */ = {
 			isa = PBXGroup;
 			children = (
+				5DB8403F2394B00D00B2A56F /* HapticFeed */,
+				5DB8402B2394AEB700B2A56F /* Index Selection View */,
 				5D9AB5CF22DC9D3A005F33EF /* AppDelegate.swift */,
 				5D9AB5D122DC9D3A005F33EF /* ViewController.swift */,
 				5D9AB5D322DC9D3A005F33EF /* Main.storyboard */,
@@ -62,6 +86,55 @@
 				5D9AB5DB22DC9D3C005F33EF /* Info.plist */,
 			);
 			path = TableIndexSelection;
+			sourceTree = "<group>";
+		};
+		5DB8402B2394AEB700B2A56F /* Index Selection View */ = {
+			isa = PBXGroup;
+			children = (
+				5DB8403C2394AFA900B2A56F /* Extensions */,
+				5DB840372394AED500B2A56F /* Index Selection Helper Classes */,
+				5DB8402C2394AEB700B2A56F /* IndexSelectionView.xib */,
+				5DB8402D2394AEB700B2A56F /* IndexSelectionViewHelper.swift */,
+				5DB8402E2394AEB700B2A56F /* IndexSelectionView.swift */,
+				5DB8402F2394AEB700B2A56F /* Index Selection Cell */,
+				5DDD7C8D23957568008B4882 /* IndexSelectionViewConstants.swift */,
+				5DDD7C8F2395763E008B4882 /* IndexSelectionViewConfiguration.swift */,
+			);
+			path = "Index Selection View";
+			sourceTree = "<group>";
+		};
+		5DB8402F2394AEB700B2A56F /* Index Selection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5DB840302394AEB700B2A56F /* IndexSelectionTableViewCell.xib */,
+				5DB840312394AEB700B2A56F /* IndexSelectionTableViewCell.swift */,
+			);
+			path = "Index Selection Cell";
+			sourceTree = "<group>";
+		};
+		5DB840372394AED500B2A56F /* Index Selection Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5DB840382394AF1E00B2A56F /* IndexSelectionProtocols.swift */,
+				5DB8403A2394AF5400B2A56F /* IndexSelectionHelper.swift */,
+			);
+			path = "Index Selection Helper Classes";
+			sourceTree = "<group>";
+		};
+		5DB8403C2394AFA900B2A56F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DB8403D2394AFBA00B2A56F /* TableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5DB8403F2394B00D00B2A56F /* HapticFeed */ = {
+			isa = PBXGroup;
+			children = (
+				5DB840402394B00D00B2A56F /* HapticFeed.swift */,
+			);
+			path = HapticFeed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +195,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB840322394AEB700B2A56F /* IndexSelectionView.xib in Resources */,
 				5D9AB5DA22DC9D3C005F33EF /* LaunchScreen.storyboard in Resources */,
 				5D9AB5D722DC9D3C005F33EF /* Assets.xcassets in Resources */,
 				5D9AB5D522DC9D3A005F33EF /* Main.storyboard in Resources */,
+				5DB840352394AEB700B2A56F /* IndexSelectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB840342394AEB700B2A56F /* IndexSelectionView.swift in Sources */,
 				5D9AB5D222DC9D3A005F33EF /* ViewController.swift in Sources */,
+				5DB840362394AEB700B2A56F /* IndexSelectionTableViewCell.swift in Sources */,
+				5DDD7C902395763E008B4882 /* IndexSelectionViewConfiguration.swift in Sources */,
+				5DB8403E2394AFBA00B2A56F /* TableViewExtension.swift in Sources */,
+				5DDD7C8E23957568008B4882 /* IndexSelectionViewConstants.swift in Sources */,
+				5DB840332394AEB700B2A56F /* IndexSelectionViewHelper.swift in Sources */,
+				5DB840412394B00D00B2A56F /* HapticFeed.swift in Sources */,
 				5D9AB5D022DC9D3A005F33EF /* AppDelegate.swift in Sources */,
+				5DB8403B2394AF5400B2A56F /* IndexSelectionHelper.swift in Sources */,
+				5DB840392394AF1E00B2A56F /* IndexSelectionProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
