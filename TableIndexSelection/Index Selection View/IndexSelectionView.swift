@@ -64,7 +64,7 @@ class IndexSelectionView: UIView {
         guard let view = IndexSelectionViewHelper.getParentControllerBaseView(for: self)
             else { return }
         view.addSubview(indexIndicatorLabel)
-        indexIndicatorLabel.center = delegate!.getPopOverPosition()
+        indexIndicatorLabel.center = delegate?.getPopOverPosition() ?? .zero
     }
     
     private func setUpData() {

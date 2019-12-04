@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IndexSelectionViewHelper {
+open class IndexSelectionViewHelper {
     
     static func getParentControllerBaseView(for view: UIView) -> UIView? {
         return IndexSelectionViewHelper.getPrentController(for: view)?.view

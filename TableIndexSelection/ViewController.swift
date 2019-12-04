@@ -19,10 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setUpIndexSelectionView()
-        updateIndexSelectionView()
         dataSource.append(contentsOf: loadRandomData(100,of: 10))
-        updateIndexSelectionView()
         setUpTableView()
     }
     
@@ -71,11 +68,6 @@ extension ViewController: IndexSelectionViewDelegate {
         } else {
             scrollTo(indexPath: IndexPath(row: NSNotFound, section: 0))
         }
-    }
-    
-    private func setUpIndexSelectionView() {
-        indexSelectionView.delegate = self
-        indexSelectionView.setUpIndicatorView(with: IndexSelectionViewConfiguration())
     }
     
     private func updateIndexSelectionView() {
