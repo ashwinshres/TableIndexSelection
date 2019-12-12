@@ -15,11 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var dataSource = [String]()
+    var indexIndicators = Set<Character>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dataSource.append(contentsOf: loadRandomData(100,of: 10))
+        extractCharactersForIndexIndicator()
         setUpTableView()
     }
     
@@ -32,6 +34,13 @@ class ViewController: UIViewController {
         return strings.sorted(by: { (string1, string2) -> Bool in
             return string1.lowercased() < string2.lowercased()
         })
+    }
+
+    private func extractCharactersForIndexIndicator() {
+        for data in dataSource {
+            indexIndicators.insert(data.first!)
+        }
+        print(indexIndicators)
     }
     
     private func setUpTableView() {
