@@ -22,16 +22,27 @@ open class IndexedTableView: UITableView {
     
     func configureIndexedTable(on indexPosition: IndexViewPosition,
                                ofWidth width: CGFloat,
-                               withDelegate indexScollDelegate: IndexSelectionViewDelegate? = nil) {
+                               withDelegate indexScollDelegate: IndexSelectionViewDelegate? = nil,
+                               and indices: Set<Character>) {
         self.indexPosition = indexPosition
         self.indexViewWidth = width
         indexView.delegate = indexScollDelegate
         setViewPositions()
         if indexPosition == .none { return }
         setUpIndexSelectionView()
+        setupCharacterIndices(with: indices)
         indexView.tableView.reloadData()
     }
     
+    /// Appends character indices to ```charIndexes``` variable of ```indexView```.
+    /// - Parameter indices: The indices extracted from ```dataSource```.
+    private func setupCharacterIndices(with indices: Set<Character>) {
+        indexView.charIndexes.append("#")
+        for index in indices
+            where index.asciiValue! >= UInt8(65) && index.asciiValue! < UInt8(91) {
+                indexView.charIndexes.append(String(index))
+        }
+    }
     
     private func setViewPositions() {
         var indexViewX: CGFloat = 0.0

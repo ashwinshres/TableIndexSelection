@@ -12,14 +12,15 @@ class TryViewController: UIViewController {
 
     @IBOutlet var tableView: IndexedTableView!
     var dataSource = [String]()
+    var indexIndicators = Set<Character>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         dataSource.append(contentsOf: loadRandomData(100,of: 10))
+        extractCharactersForIndexIndicator()
         setUpTableView()
-        
     }
     
     private func loadRandomData(_ count: Int, of length: Int) -> [String] {
@@ -33,12 +34,19 @@ class TryViewController: UIViewController {
         })
     }
     
+    /// Extracts the first characters of all the strings present in ```dataSource```.
+    private func extractCharactersForIndexIndicator() {
+        for data in dataSource {
+            let upperCasedData = data.uppercased()
+            indexIndicators.insert(upperCasedData.first!)
+        }
+    }
+    
     private func setUpTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.configureIndexedTable(on: .left, ofWidth: 70.0, withDelegate: self)
+        tableView.configureIndexedTable(on: .left, ofWidth: 70.0, withDelegate: self, and: indexIndicators)
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
     
 }

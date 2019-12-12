@@ -20,7 +20,13 @@ class IndexSelectionView: UIView {
     @IBOutlet var tableView: UITableView!
     
     private lazy var indexIndicatorLabel = UILabel()
-    private var charIndexes = [String]()
+    var charIndexes = [String]() {
+        didSet {
+            charIndexes = charIndexes.sorted { (string1, string2) -> Bool in
+                return string1 < string2
+            }
+        }
+    }
     private var previousSelectedIndex: IndexPath?
     private lazy var indexViewConfiguration = IndexSelectionViewConfiguration()
     weak var delegate: IndexSelectionViewDelegate?
@@ -46,11 +52,11 @@ class IndexSelectionView: UIView {
     func commonInit() {
         loadNib()
         setView(contentView)
-        setUpData()
+//        setUpData()
         setUpTable()
     }
     
-    func  setUpIndicatorView(with configuration: IndexSelectionViewConfiguration = IndexSelectionViewConfiguration()) {
+    func setUpIndicatorView(with configuration: IndexSelectionViewConfiguration = IndexSelectionViewConfiguration()) {
         indexViewConfiguration = configuration
         indexIndicatorLabel.removeFromSuperview()
         indexIndicatorLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: width, height: width)))
@@ -67,12 +73,12 @@ class IndexSelectionView: UIView {
         indexIndicatorLabel.center = delegate?.getPopOverPosition() ?? .zero
     }
     
-    private func setUpData() {
-        charIndexes.append("#")
-        for i in 65..<91 {
-            charIndexes.append(String(UnicodeScalar(UInt8(i))))
-        }
-    }
+//    private func setUpData() {
+//        charIndexes.append("#")
+//        for i in 65..<91 {
+//            charIndexes.append(String(UnicodeScalar(UInt8(i))))
+//        }
+//    }
     
     func setView(_ contentView: UIView) {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -174,6 +180,12 @@ extension IndexSelectionView {
         }
     }
     
+    private func animateIndexIndicatorLabel(at indexPath: IndexPath) {
+         let cell = self.tableView.cellForRow(at: indexPath) as? IndexSelectionTableViewCell
+         cell?.setIsSelected(flag: true)
+         self.tableView.reloadRows(at: [indexPath], with: .fade)
+     }
+    
 }
 
 
@@ -191,6 +203,7 @@ extension IndexSelectionView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        animateIndexIndicatorLabel(at: indexPath)
         scrollTo(indexPath: indexPath)
     }
     
