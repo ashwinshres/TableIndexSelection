@@ -174,6 +174,12 @@ extension IndexSelectionView {
         }
     }
     
+    private func animateIndexIndicatorLabel(at indexPath: IndexPath) {
+         let cell = self.tableView.cellForRow(at: indexPath) as? IndexSelectionTableViewCell
+         cell?.setIsSelected(flag: true)
+         self.tableView.reloadRows(at: [indexPath], with: .fade)
+     }
+    
 }
 
 
@@ -191,6 +197,7 @@ extension IndexSelectionView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        animateIndexIndicatorLabel(at: indexPath)
         scrollTo(indexPath: indexPath)
     }
     
